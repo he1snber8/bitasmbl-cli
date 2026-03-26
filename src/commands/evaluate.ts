@@ -2,7 +2,7 @@ import fs from "fs-extra";
 import path from "path";
 
 export default function evaluate() {
-  const configPath = ".bitasmbl.json";
+  const configPath = path.join(process.cwd(), ".bitasmbl.json");
 
   if (!fs.existsSync(configPath)) {
     console.log("❌ Not initialized");
